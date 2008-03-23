@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Win32-FileNotify.t
+lib/Win32/FileNotify.pm
