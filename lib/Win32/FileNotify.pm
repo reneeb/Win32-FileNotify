@@ -7,7 +7,7 @@ use Carp;
 use File::Basename;
 use Win32::ChangeNotify;
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 sub new{
     my ($class,$file) = @_;
