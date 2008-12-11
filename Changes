@@ -5,6 +5,8 @@ Revision history for Perl extension Win32::FileNotify.
      + updated MANIFEST
      + updated README (deleted boilerplate text, added 2008 to copyright)
      + added META.yml
+     + added pod.t
+     + added pod_coverage.t
 
 0.1  Wed Nov  7 11:31:18 2007
 	- original version; created by h2xs 1.23 with options
