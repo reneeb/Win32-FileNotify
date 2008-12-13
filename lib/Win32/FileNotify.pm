@@ -132,7 +132,7 @@ Renee Baecker, E<lt>module@renee-baecker.deE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2007 by Renee Baecker
+Copyright (C) 2007 - 2008 by Renee Baecker
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,
