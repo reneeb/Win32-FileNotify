@@ -5,9 +5,10 @@ use warnings;
 
 use Carp;
 use File::Basename;
+use File::stat;
 use Win32::ChangeNotify;
 
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 sub new{
     my ($class,$file) = @_;
@@ -16,9 +17,11 @@ sub new{
     
     my $dir = dirname( $file );
        $dir ||= '.';
+       
+    my $stat = stat $file if -e $file;
     
     my $self = bless {},$class;
-    $self->_modified( $file );
+    $self->_modified( $stat );
     $self->_file( $file );
     $self->_obj( $dir );
 
@@ -45,19 +48,21 @@ sub _is_changed{
     my ($self) = @_;
     my $return = 0;
     
-    if( -s $self->_file != $self->_modified ){
+    my $stat = stat $self->_file;
+    
+    if( $stat->mtime != $self->_modified ){
         $return = 1;
-        $self->_modified( $self->_file );
+        $self->_modified( $stat );
     }
     
     return $return;
 }
 
 sub _modified{
-    my ($self,$file) = @_;
+    my ($self,$stat) = @_;
     
-    if( defined $file and -e $file ){
-        $self->{__modified} = -M $file;
+    if( $stat ){
+        $self->{__modified} = $stat->mtime;
     }
 
     return $self->{__modified};

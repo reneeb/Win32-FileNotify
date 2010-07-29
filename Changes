@@ -1,5 +1,9 @@
 Revision history for Perl extension Win32::FileNotify.
 
+0.3  Thu Jul 29 2010
+     + bugfix: accidentially -s was used instead of the modified time.
+       Thanks to Mark Ginsburg (RT#59795)
+
 0.2  Thu Nov  6 11:58:22 2008
      + added manifest.t
      + updated MANIFEST

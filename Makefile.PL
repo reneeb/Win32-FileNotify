@@ -13,6 +13,7 @@ WriteMakefile(
         Carp                => 0,
         File::Basename      => 0,
         Win32::ChangeNotify => 1.05,
+        File::stat          => 0,
     }, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Win32/FileNotify.pm', # retrieve abstract from module
