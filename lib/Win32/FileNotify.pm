@@ -8,7 +8,7 @@ use File::Basename;
 use File::stat;
 use Win32::ChangeNotify;
 
-our $VERSION = '0.3';
+our $VERSION = '0.31';
 
 sub new{
     my ($class,$file) = @_;

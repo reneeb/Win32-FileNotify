@@ -1,6 +1,6 @@
 ---
 name: Win32-FileNotify
-version: 0.3
+version: 0.31
 author:
   - 'Renee Baecker <module@renee-baecker.de>'
 abstract: Monitor file changes
@@ -21,7 +21,7 @@ build_requires:
 provides:
   Win32::FileNotify:
     file: lib/Win32/FileNotify.pm
-    version: 0.3
+    version: 0.31
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
